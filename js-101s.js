@@ -250,6 +250,10 @@ return number % 2 === 0;
 // Exercise 16
 // Write a function definition named identity that takes in any input and returns that input. Don't overthink this one!
 
+function identity(input){
+return input;
+}
+
 
 // assert(identity(fruits), fruits, "Exercise 16");
 // assert(identity(vegetables), vegetables, "Exercise 16");
@@ -263,6 +267,10 @@ return number % 2 === 0;
 // Exercise 17
 // Write a function definition named isPositiveOdd that takes in a number and returns true or false if the value is both greater than zero and odd
 
+function isPositiveOdd(number){
+return number % 2 != 0 && number > 0;
+}
+
 
 // assert(isPositiveOdd(3), true, "Exercise 17");
 // assert(isPositiveOdd(positiveOddNumber), true, "Exercise 17");
@@ -275,6 +283,9 @@ return number % 2 === 0;
 // Exercise 18
 // Write a function definition named isPositiveEven that takes in a number and returns true or false if the value is both greater than zero and even
 
+function isPositiveEven(number){
+    return number % 2 == 0 && number > 0;
+}
 
 // assert(isPositiveEven(4), true, "Exercise 18" );
 // assert(isPositiveEven(positiveOddNumber), false, "Exercise 18");
@@ -287,6 +298,10 @@ return number % 2 === 0;
 // Exercise 19
 // Write a function definition named isNegativeOdd that takes in a number and returns true or false if the value is both less than zero and odd.
 
+function isNegativeOdd(number){
+    return number % 2 != 0 && number < 0;
+}
+
 
 // assert(isNegativeOdd(-3), true, "Exercise 19" );
 // assert(isNegativeOdd(positiveOddNumber), false, "Exercise 19");
@@ -298,6 +313,10 @@ return number % 2 === 0;
 
 // Exercise 20
 // Write a function definition named isNegativeEven that takes in a number and returns true or false if the value is both less than zero and even.
+
+function isNegativeEven(number){
+    return number % 2 === 0 && number < 0;
+}
 
 
 // assert(isNegativeEven(-4), true, "Exercise 20" );
