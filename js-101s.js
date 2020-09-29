@@ -1,10 +1,10 @@
 "use strict"; // leave this line here :)
 
 // Keep this function definition in order to test expected vs. actual results
-const assert = function(actual, expected, message = "") {
+const assert = function (actual, expected, message = "") {
 
     // This compares primitive values and collections. If they differ, throw an error.
-    if(JSON.stringify(actual) !== JSON.stringify(expected)) {
+    if (JSON.stringify(actual) !== JSON.stringify(expected)) {
         console.error('[assert] expected:    ' + expected)
         console.error('[assert] instead got: ' + actual)
         throw Error("Assert failed in " + message);
@@ -56,12 +56,10 @@ let fruits = ["mango", "banana", "guava", "kiwi", "strawberry"];
 let vegetables = ["eggplant", "broccoli", "carrot", "cauliflower", "zucchini"];
 
 
-
 // Exercise 4
 // Create a variable named numbers and assign it an array of numbers, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
 
 
 // Exercise 5
@@ -108,7 +106,7 @@ console.log(fruits);
 // This function generates a random number that is both positive and even
 function randomPositiveEvenNumber() {
     var randomNumber = Math.ceil(Math.random() * 100) + 10;
-    if(randomNumber % 2 !== 0) {
+    if (randomNumber % 2 !== 0) {
         return randomPositiveEvenNumber()
     }
 
@@ -118,7 +116,7 @@ function randomPositiveEvenNumber() {
 // this function generates a random number that is both positive and odd
 function randomPositiveOddNumber() {
     var randomNumber = Math.ceil(Math.random() * 100) + 10;
-    if(randomNumber % 2 === 0) {
+    if (randomNumber % 2 === 0) {
         return randomPositiveOddNumber();
     }
 
@@ -128,7 +126,7 @@ function randomPositiveOddNumber() {
 // this function generates a random number that is both negative and even.
 function randomNegativeEvenNumber() {
     var randomNumber = Math.ceil(Math.random() * -100) - 10;
-    if(randomNumber % 2 === 0) {
+    if (randomNumber % 2 === 0) {
         return randomNumber;
     }
 
@@ -138,7 +136,7 @@ function randomNegativeEvenNumber() {
 // this function generates a random number that is both negative and odd.
 function randomNegativeOddNumber() {
     var randomNumber = Math.ceil(Math.random() * -100) - 10;
-    if(randomNumber % 2 === 0) {
+    if (randomNumber % 2 === 0) {
         return randomNegativeOddNumber();
     }
 
@@ -175,11 +173,12 @@ var negativeOddNumber = randomNegativeOddNumber();
 // assert(plusTwo(0), 2, "zero plus 2 is two")
 
 
-
 // Exercise 11
 // Write a function definition for a function named addOne that takes in a number and returns that number plus one
 
-
+function addOne(number) {
+    return number + 1;
+}
 
 
 // assert(addOne(2), 3, "Exercise 11");
@@ -192,7 +191,9 @@ var negativeOddNumber = randomNegativeOddNumber();
 // Exercise 12
 // Write a function definition named isPositive that takes in a number and returns true or false if that number is positive.
 
-
+function isPositive(number) {
+    return number > 0;
+}
 
 
 // assert(isPositive(positiveOddNumber), true, "Exercise 12");
@@ -205,6 +206,9 @@ var negativeOddNumber = randomNegativeOddNumber();
 // Exercise 13
 // Write a function definition named isNegative that takes in a number and returns true or False if that number is negative.
 
+function isNegative(number) {
+    return number < 0;
+}
 
 
 // assert(isNegative(positiveOddNumber), false, "Exercise 13");
@@ -217,6 +221,9 @@ var negativeOddNumber = randomNegativeOddNumber();
 // Exercise 14
 // Write a function definition named isOdd that takes in a number and returns true or false if that number is odd.
 
+function isOdd(number) {
+    return number % 2 !== 0;
+}
 
 
 // assert(isOdd(positiveOddNumber), true, "Exercise 14");
@@ -228,7 +235,9 @@ var negativeOddNumber = randomNegativeOddNumber();
 // Exercise 15
 // Write a function definition named isEven that takes in a number and returns true or false if that number is even.
 
-
+function isEven(number){
+return number % 2 === 0;
+}
 
 // assert(isEven(2), true, "Exercise 15");
 // assert(isEven(positiveOddNumber), false, "Exercise 15");
@@ -299,10 +308,8 @@ var negativeOddNumber = randomNegativeOddNumber();
 // addToDone("Exercise 20 is correct.")
 
 
-
 // Exercise 21
 // Write a function definition named half that takes in a number and returns half the provided number.
-
 
 
 // assert(half(4), 2, "Exercise 21");
@@ -312,7 +319,6 @@ var negativeOddNumber = randomNegativeOddNumber();
 // assert(half(negativeOddNumber), negativeOddNumber / 2, "Exercise 21");
 // assert(half(negativeEvenNumber), negativeEvenNumber / 2, "Exercise 21");
 // addToDone("Exercise 21 is correct.")
-
 
 
 // Exercise 22
@@ -328,10 +334,8 @@ var negativeOddNumber = randomNegativeOddNumber();
 // addToDone("Exercise 22 is correct.")
 
 
-
 // Exercise 23
 // Write a function definition named triple that takes in a number and returns triple the provided number.
-
 
 
 // assert(triple(4), 12, "Exercise 23");
@@ -343,10 +347,8 @@ var negativeOddNumber = randomNegativeOddNumber();
 // addToDone("Exercise 23 is correct.")
 
 
-
 // Exercise 24
 // Write a function definition named reverseSign that takes in a number and returns the provided number but with the sign reversed.
-
 
 
 // assert(reverseSign(4), -4, "Exercise 24");
@@ -356,7 +358,6 @@ var negativeOddNumber = randomNegativeOddNumber();
 // assert(reverseSign(negativeOddNumber), negativeOddNumber * -1, "Exercise 24");
 // assert(reverseSign(negativeEvenNumber), negativeEvenNumber * -1, "Exercise 24");
 // addToDone("Exercise 24 is correct.")
-
 
 
 // Exercise 25
@@ -372,7 +373,6 @@ var negativeOddNumber = randomNegativeOddNumber();
 // addToDone("Exercise 25 is correct.")
 
 
-
 // Exercise 26
 // Write a function definition named isMultipleOfThree that takes in a number and returns true or false if the number is evenly divisible by 3.
 
@@ -384,8 +384,6 @@ var negativeOddNumber = randomNegativeOddNumber();
 // addToDone("Exercise 26 is correct.")
 
 
-
-
 // Exercise 27
 // Write a function definition named isMultipleOfFive that takes in a number and returns true or false if the number is evenly divisible by 5.
 
@@ -395,7 +393,6 @@ var negativeOddNumber = randomNegativeOddNumber();
 // assert(isMultipleOfFive(4), false, "Exercise 27");
 // assert(isMultipleOfFive(10), true, "Exercise 27");
 // addToDone("Exercise 27 is correct.")
-
 
 
 // Exercise 28
@@ -410,11 +407,8 @@ var negativeOddNumber = randomNegativeOddNumber();
 // addToDone("Exercise 28 is correct.")
 
 
-
-
 // Exercise 29
 // Write a function definition named square that takes in a number and returns the number times itself.
-
 
 
 // assert(square(3), 9, "Exercise 29");
@@ -424,17 +418,14 @@ var negativeOddNumber = randomNegativeOddNumber();
 // addToDone("Exercise 29 is correct.")
 
 
-
 // Exercise 30
 // Write a function definition named add that takes in two numbers and returns the sum.
-
 
 
 // assert(add(3, 2), 5, "Exercise 30");
 // assert(add(10, -2), 8, "Exercise 30");
 // assert(add(5, 7), 12, "Exercise 30");
 // addToDone("Exercise 30 is correct.")
-
 
 
 // Exercise 31
@@ -447,7 +438,6 @@ var negativeOddNumber = randomNegativeOddNumber();
 // addToDone("Exercise 31 is correct.")
 
 
-
 // Exercise 32
 // Write a function definition named squareRoot that takes in a number and returns the square root of the provided number
 
@@ -456,8 +446,6 @@ var negativeOddNumber = randomNegativeOddNumber();
 // assert(squareRoot(64), 8.0, "Exercise 32");
 // assert(squareRoot(81), 9.0, "Exercise 32");
 // addToDone("Exercise 32 is correct.")
-
-
 
 
 // Exercise 33
@@ -469,7 +457,6 @@ var negativeOddNumber = randomNegativeOddNumber();
 // addToDone("Exercise 33 is correct.")
 
 
-
 // Exercise 34
 // Write a function definition named multiply that takes in two numbers and returns the first times the second argument.
 
@@ -477,7 +464,6 @@ var negativeOddNumber = randomNegativeOddNumber();
 // assert(multiply(3, 5), 15, "Exercise 34");
 // assert(multiply(5, 2), 10, "Exercise 34");
 // addToDone("Exercise 34 is correct.")
-
 
 
 // Exercise 35
@@ -510,7 +496,6 @@ var negativeOddNumber = randomNegativeOddNumber();
 // addToDone("Exercise 37 is correct.")
 
 
-
 // Exercise 38
 // Write a function definition named sumOfSquares that takes in two numbers, squares each number, then returns the sum of both squares.
 
@@ -518,7 +503,6 @@ var negativeOddNumber = randomNegativeOddNumber();
 // assert(sumOfSquares(5, 2), 29, "Exercise 38");
 // assert(sumOfSquares(2, 4), 20, "Exercise 38");
 // addToDone("Exercise 38 is correct.")
-
 
 
 // Exercise 39
@@ -542,7 +526,6 @@ var negativeOddNumber = randomNegativeOddNumber();
 // addToDone("Exercise 40 is correct.")
 
 
-
 // Exercise 41
 // Write a function definition named areaOfCircle that takes in a number representing a circle's radius and returns the area of the circle
 
@@ -560,7 +543,6 @@ var negativeOddNumber = randomNegativeOddNumber();
 // assert(circumference(5), 31.41592653589793, "Exercise 42");
 // assert(circumference(7), 43.982297150257104, "Exercise 42");
 // addToDone("Exercise 42 is correct.")
-
 
 
 // Exercise 43
@@ -643,8 +625,6 @@ var negativeOddNumber = randomNegativeOddNumber();
 // addToDone("Exercise 50 is correct.")
 
 
-
-
 // Exercise 51
 // Write a function definition named second that takes in sequence and returns the second value of that sequence.
 
@@ -720,7 +700,6 @@ var negativeOddNumber = randomNegativeOddNumber();
 // addToDone("Exercise 58 is correct.")
 
 
-
 // Exercise 59
 // Write a function definition named firstToLast that takes in sequence and returns the sequence with the first value moved to the end of the sequence.
 
@@ -728,7 +707,6 @@ var negativeOddNumber = randomNegativeOddNumber();
 // assert(firstToLast(["JS", "is", "awesome"]), ["is", "awesome", "JS"], "Exercise 59");
 // assert(firstToLast(["strawberry", "kiwi", "mango", "guava"]), ["kiwi", "mango", "guava", "strawberry"], "Exercise 59");
 // addToDone("Exercise 59 is correct.")
-
 
 
 // Exercise 60
@@ -740,7 +718,6 @@ var negativeOddNumber = randomNegativeOddNumber();
 // addToDone("Exercise 60 is correct.")
 
 
-
 //  Exercise 61
 //  Write a function definition named mean that takes in sequence of numbers and returns the average value
 
@@ -748,7 +725,6 @@ var negativeOddNumber = randomNegativeOddNumber();
 // assert(mean([3, 3, 3]), 3, "Exercise 61");
 // assert(mean([1, 5, 6]), 4, "Exercise 61");
 // addToDone("Exercise 61 is correct.")
-
 
 
 // Exercise 62
@@ -790,8 +766,6 @@ var negativeOddNumber = randomNegativeOddNumber();
 // addToDone("Exercise 65 is correct.")
 
 
-
-
 // Exercise 66
 // Write a function definition named getSmallestNumber that takes in sequence of numbers and returns the smallest number.
 
@@ -809,7 +783,6 @@ var negativeOddNumber = randomNegativeOddNumber();
 // assert(onlyOddNumbers([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]), [-5, -3, -1, 1, 3, 5], "Exercise 67");
 // assert(onlyOddNumbers([-4, -3, 1]), [-3, 1], "Exercise 67");
 // addToDone("Exercise 67 is correct.")
-
 
 
 // Exercise 68
@@ -839,7 +812,6 @@ var negativeOddNumber = randomNegativeOddNumber();
 // addToDone("Exercise 70 is correct.");
 
 
-
 // Exercise 71
 // Write a function definition named hasEvens that takes in sequence of numbers and returns true if there are any even numbers in the sequence
 
@@ -848,7 +820,6 @@ var negativeOddNumber = randomNegativeOddNumber();
 // assert(hasEvens([3, 3, 3]), false, "Exercise 71");
 // assert(hasEvens([]), false, "Exercise 71");
 // addToDone("Exercise 71 is correct.");
-
 
 
 // Exercise 72
@@ -934,7 +905,6 @@ var negativeOddNumber = randomNegativeOddNumber();
 // Write a function definition named onlyNegativeOdds that takes in sequence of numbers and returns an array containing all the negative odd numbers from the sequence
 
 
-
 // assert(onlyNegativeOdds([1, -2, 3]), [], "Exercise 80");
 // assert(onlyNegativeOdds([2, -5, -6]), [-5], "Exercise 80");
 // assert(onlyNegativeOdds([3, 3, 4, 6]), [], "Exercise 80");
@@ -987,7 +957,6 @@ var negativeOddNumber = randomNegativeOddNumber();
 // assert(flatten([[1, 2, 3], [1, 2, 3], [1, 2, 3]]), [1, 2, 3, 1, 2, 3, 1, 2, 3], "Exercise 85");
 // assert(flatten([["tomato", "mango", "kiwi"], ["eggplant", "broccoli"]]), ["tomato", "mango", "kiwi", "eggplant", "broccoli"], "Exercise 85");
 // addToDone("Exercise 85 is correct.")
-
 
 
 // Exercise 86
@@ -1047,7 +1016,6 @@ const book = {
 // addToDone("Exercise 89 is complete.")
 
 
-
 // Exercise 90
 // Write a function named getBookAuthor that takes in a object (the above declared book variable) and returns the author's name
 
@@ -1090,7 +1058,6 @@ const books = [
 // addToDone("Exercise 91 is complete.")
 
 
-
 // Exercise 92
 // Write a function named totalOfBookPrices that takes in a array of objects and returns the sum total of all the book prices added together
 
@@ -1116,7 +1083,6 @@ const books = [
 // }, "Exercise 94");
 //
 // addToDone("Exercise 94 is complete")
-
 
 
 // Exercise 95
@@ -1172,14 +1138,12 @@ const shoppingCart = {
 // addToDone("Exercise 96 is complete")
 
 
-
 // Exercise 97
 // Write a function named numberOfItemTypes that takes in the shopping cart as input and returns the number of unique item types in the shopping cart.
 // We're not yet using the quantity of each item, but rather focusing on determining how many different types of items are in the cart.
 
 // assert(numberOfItemTypes(shoppingCart), 5, "Exercise 97");
 // addToDone("Exercise 97 is complete.")
-
 
 
 // Exercise 98
@@ -1190,14 +1154,12 @@ const shoppingCart = {
 // addToDone("Exercise 98 is complete.")
 
 
-
 // Exercise 99
 // Write a function named getAverageItemPrice that takes in the shopping cart as an input and returns the average of all the item prices.
 // Hint - This should determine the total price divided by the number of types of items. This does not account for each item type's quantity.\
 
 // assert(getAverageItemPrice(shoppingCart), 2.1420000000000003, "Exercise 99");
 // addToDone("Exercise 99 is complete.")
-
 
 
 // Exercise 100
