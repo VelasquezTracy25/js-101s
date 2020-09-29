@@ -76,35 +76,34 @@ console.log(fruits);
 // add the string "tomato" onto the end of the vegetables array.
 // Recommend using the built-in JS operation to add to an array.
 
-
+vegetables.push("tomato");
+console.log(fruits);
 
 
 // Exercise 7
 // Given the array of numbers defined below, reverse the array of numbers that you created above.
 
+numbers.reverse();
+console.log(numbers);
 
 
 // Exercise 8
 // Sort the vegetables in alphabetical order. Recommend finding a way to sort the array with a built-in method
-
-
-
+vegetables.sort();
+console.log(vegetables);
 
 
 // Exercise 9
 // Write the code necessary to sort the fruits in reverse alphabetical order
 
-
-
+fruits.sort().reverse();
+console.log(fruits);
 
 
 // Exercise 10
 // Write the code necessary to produce a single array that holds all fruits then all vegetables in the order as they were sorted above.
 // Assign the result to a variable named fruitsAndVeggies.
 // *hint* the search engine search here would be "how to combine two arrays in JavaScript", for example.
-
-
-
 
 // This function generates a random number that is both positive and even
 function randomPositiveEvenNumber() {
@@ -157,7 +156,7 @@ var negativeOddNumber = randomNegativeOddNumber();
 // Be sure to return values from your function definitions. The assert statements will call/run your function(s) for you.
 
 
-// Example function defintion:
+// Example function definition:
 // Write a sayHello function that adds the string "Hello, " to the beginning and "!" to the end of any given input.
 
 // assert(sayHello("Jane"), "Hello, Jane!");
@@ -179,6 +178,8 @@ var negativeOddNumber = randomNegativeOddNumber();
 
 // Exercise 11
 // Write a function definition for a function named addOne that takes in a number and returns that number plus one
+
+
 
 
 // assert(addOne(2), 3, "Exercise 11");
@@ -931,6 +932,8 @@ var negativeOddNumber = randomNegativeOddNumber();
 
 // Exercise 80
 // Write a function definition named onlyNegativeOdds that takes in sequence of numbers and returns an array containing all the negative odd numbers from the sequence
+
+
 
 // assert(onlyNegativeOdds([1, -2, 3]), [], "Exercise 80");
 // assert(onlyNegativeOdds([2, -5, -6]), [-5], "Exercise 80");
